@@ -10,6 +10,9 @@ const routes: Routes = [
     canActivate: [AuthGuardService],
     loadChildren: './members/member-routing.module#MemberRoutingModule'
   },
+  { path: 'find-drink', loadChildren: './public/find-drink/find-drink.module#FindDrinkPageModule' },
+  { path: 'random-drink', loadChildren: './public/random-drink/random-drink.module#RandomDrinkPageModule' },
+  { path: 'menu', loadChildren: './public/menu/menu.module#MenuPageModule' },
 ];
 
 @NgModule({
