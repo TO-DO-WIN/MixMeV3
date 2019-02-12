@@ -7,7 +7,7 @@ const routes: Routes = [
   { path: 'register', loadChildren: './public/register/register.module#RegisterPageModule' },
   { path: '',
     canActivate: [AuthGuardService],
-    loadChildren: './members/menu/menu.module#MenuRouterModule'
+    loadChildren: './members/menu/menu.module#MenuPageModule'
   },
 ];
 
