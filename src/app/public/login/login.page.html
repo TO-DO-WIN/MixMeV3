@@ -1,25 +1,15 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
+<ion-header >
+
 </ion-header>
 
-<ion-content class="card-background-page">
+<ion-content class="card-background-page" padding>
     <ion-card>
         <img src="assets/img/alcohol-alcoholic-bar-989711.jpg"/>
         <div class="card-title">MixMe</div>
-
-        <ion-row>
-          <ion-col>
-              <button ion-button (click)="login()" color="dark" clear> Login
-              </button>
-          </ion-col>
-          <ion-col>
-              <button ion-button color="light" href="/register" routerDirection="forward" large>Register</button>
-          </ion-col>
-        </ion-row>
-
+        <ion-item>
+            <ion-button  color="dark" (click)="login()" slot="start"> Login</ion-button>
+            <ion-button  color="dark" href="/register" routerDirection="forward" large slot="end">Register</ion-button>
+          </ion-item>
       </ion-card>
 
 </ion-content>
-

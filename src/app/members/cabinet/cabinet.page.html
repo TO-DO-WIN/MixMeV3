@@ -1,14 +1,21 @@
 <ion-header>
     <ion-toolbar>
-      <ion-buttons slot="start">
+      <ion-buttons slot="end">
         <ion-button (click)="logout()">
           <ion-icon slot="icon-only" name="log-out"></ion-icon>
         </ion-button>
       </ion-buttons>
-      <ion-title>My Cabinet</ion-title>
+      <ion-title >My Cabinet</ion-title>      
     </ion-toolbar>
-  </ion-header>
+ </ion-header>
 
 <ion-content padding>
+  <ion-menu-toggle>
+    <ion-button expand="full">Toggle</ion-button>
+  </ion-menu-toggle>
+
+  <ion-button expand="full" (click)="openMenu()">Open menu</ion-button>
+  <ion-button expand="full" routerLink="/menu/second" routerDirection="root">Open Second</ion-button>
 
 </ion-content>
+

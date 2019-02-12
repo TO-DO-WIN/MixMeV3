@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from 'src/app/services/authentication.service';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-cabinet',
@@ -8,12 +9,16 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
 })
 export class CabinetPage implements OnInit {
 
-  constructor(private authService: AuthenticationService) { }
+  constructor(private menu: MenuController, private authService: AuthenticationService) { }
 
   ngOnInit() {
   }
 
   logout(){
     this.authService.logout();
+  }
+
+  openMenu() {
+    this.menu.open();
   }
 }
